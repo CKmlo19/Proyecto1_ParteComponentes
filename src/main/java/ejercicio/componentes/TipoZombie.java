@@ -15,10 +15,10 @@ public enum TipoZombie {
     MEDIANO_ALCANCE("Zombie de Mediano Alcance"),
     CHOQUE("Zombie de Choque");
 
-    private final String nombre;
+    private final String tipo_especifico;
 
-    private TipoZombie(String nombre) {
-        this.nombre = nombre;
+    private TipoZombie(String tipo_especifico) {
+        this.tipo_especifico = tipo_especifico;
     }
 
     public static TipoZombie getAEREO() {
@@ -37,10 +37,9 @@ public enum TipoZombie {
         return CHOQUE;
     }
 
-    public String getNombre() {
-        return nombre;
-    }   
-   
+    public String getTipoEspecifico() {
+        return tipo_especifico;
+    }
 }
 
 

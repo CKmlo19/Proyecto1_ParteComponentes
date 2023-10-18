@@ -14,19 +14,17 @@ public enum TipoDefensa {
     MEDIANO_ALCANCE("Defensa de Mediano Alcance"),
     IMPACTO("Defensa de Impacto"),
     ATAQUE_MULTIPLE ("Defensa de Ataque Múltiple"),
-    BLOQUES ("Defensa de Bloque"),
-    RELIQUIA("Reliquia");
+    BLOQUES ("Defensa de Bloque");
     
-    private final String nombre;
+    private final String tipo_especifico;
 
-    private TipoDefensa(String nombre) {
-        this.nombre = nombre;
+    private TipoDefensa(String tipo_especifico) {
+        this.tipo_especifico = tipo_especifico;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getTipoEspecifico() {
+        return tipo_especifico;
     }
-
 
     public static TipoDefensa getAEREO() {
         return AEREO;

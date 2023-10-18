@@ -4,11 +4,6 @@
  */
 package ejercicio.componentes;
 
-import java.awt.Color;
-import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-
 /**
  *
  * @author masis
@@ -21,9 +16,13 @@ public class Defensa extends Personaje{
         this.tipoDefensa = tipoDefensa;
     }
     
+   
+    
     @Override
     public String toString() {
-        return "Defensa{" + "Nombre=" + getNombre() + ", tipo=" + tipoDefensa.getNombre() + '}';
+        return tipoDefensa.getTipoEspecifico() + "," + getNombre() + "," + getVida() + "," + 
+        getCantidad_golpes() + "," + getNivel() + ", " + getCampos() + "," + getNivel_aparicion() + "," + getTipo() + "," + 
+        getRango() + "," + getDaño() + "," + getRutaImagen();
     }
 
 

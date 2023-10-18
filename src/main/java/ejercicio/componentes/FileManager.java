@@ -69,7 +69,7 @@ public class FileManager {
 
         try(BufferedWriter bw = new BufferedWriter (new FileWriter(path, true))) 
         {
-            bw.write(value);
+            bw.write(value + "\n");
             bw.close();
         }
         

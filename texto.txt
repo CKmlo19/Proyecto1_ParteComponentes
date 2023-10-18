@@ -1,0 +1,7 @@
+Zombie de Contacto, 1, 1, 1, 1, 1, 1, ZOMBIE, 1, 1, C:\zombie.gif
+Defensa de Impacto, 1, 1, 1, 1, 1, 1, DEFENSA, 1, 1, C:\zombie.gif
+Zombie Aéreo, 1, 1, 1, 1, 1, 1, ZOMBIE, 1, 1, C:\zombie.gif
+Zombie de Contacto, 1, 1, 1, 1, 1, 1, ZOMBIE, 1, 1, C:\zombie.gif
+Defensa de Impacto, 1, 1, 1, 1, 1, 1, DEFENSA, 1, 1, C:\zombie.gif
+Zombie Aéreo, 1, 1, 1, 1, 1, 1, ZOMBIE, 1, 1, C:\zombie.gif
+Defensa Aérea, 1, 1, 1, 1, 1, 1, DEFENSA, 1, 1, C:\zombie.gif

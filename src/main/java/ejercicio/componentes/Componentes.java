@@ -18,10 +18,12 @@ import javax.swing.JFrame;
  */
 public class Componentes {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Ventana v1 = new Ventana();
         v1.setVisible(true);
         ArrayList<Personaje> arreglo = (ArrayList<Personaje>)FileManager.readObject("nuevopath.dat");
+        String str = FileManager.readFile("texto.txt");
+        System.out.println(str);
         
         for (int i = 0; i < arreglo.size(); i++) {
             System.out.println(arreglo.get(i).toString());

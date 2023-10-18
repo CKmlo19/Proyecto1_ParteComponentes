@@ -8,7 +8,10 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
@@ -460,7 +463,15 @@ public class Ventana extends javax.swing.JFrame {
                 arreglo.add(p1);
                 System.out.println(p1.toString());
             }
-            FileManager.writeObject(arreglo, "nuevopath.dat");
+            //FileManager.writeObject(arreglo, "nuevopath.dat");
+            
+            for (int i = 0; i < arreglo.size(); i++) {
+                try { 
+                    FileManager.writeFile("texto.txt", arreglo.get(i).toString());
+                } catch (IOException ex) {
+                    JOptionPane.showMessageDialog(this, "Error, no se ha creado el archivo");
+                }
+            }
         }
         else{
             JOptionPane.showMessageDialog(this, "Error, no se ha creado el personaje");
@@ -544,9 +555,9 @@ public class Ventana extends javax.swing.JFrame {
             cbxTipoEspecial.removeAllItems();
             System.out.println("Esto es zombi");
             TipoZombie[] values = TipoZombie.values();
-            String[] enumNames = new String[values.length-1];
-            for (int i = 0; i < values.length-1; i++) {
-            enumNames[i] = values[i].getNombre();
+            String[] enumNames = new String[values.length];
+            for (int i = 0; i < values.length; i++) {
+            enumNames[i] = values[i].getTipoEspecifico();
             cbxTipoEspecial.addItem(enumNames[i]);
             cbxTipoEspecial.repaint();
             }
@@ -557,7 +568,7 @@ public class Ventana extends javax.swing.JFrame {
             TipoDefensa[] values = TipoDefensa.values();
             String[] enumNames = new String[values.length-1];
             for (int i = 0; i < values.length-1; i++) {
-            enumNames[i] = values[i].getNombre();
+            enumNames[i] = values[i].getTipoEspecifico();
             cbxTipoEspecial.addItem(enumNames[i]);
             cbxTipoEspecial.repaint();
             }
